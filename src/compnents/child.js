@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+let renderCount = 0;
 
 export default function Child() {
-    return (
-        <div>
-            
-        </div>
-    )
+  useEffect(() => {
+    renderCount++;
+  });
+  return <div>rendercount: {renderCount}</div>;
 }
